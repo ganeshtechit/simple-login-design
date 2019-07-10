@@ -1,0 +1,150 @@
+@media screen and (min-width: 768px) {
+    .bottimg {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 1610px) {}
+
+@media screen and (max-width: 1600px) and (min-width: 1450px) {}
+
+@media screen and (max-width: 1440px) and (min-width: 1370px) {}
+
+@media screen and (max-width: 1300px) and (min-width: 1024px) {}
+
+@media screen and (max-width: 1280px) and (min-width: 1024px) {}
+
+@media screen and (max-width: 1024px) and (min-width: 250px) {
+    .banner {
+        height: calc(100% - 90px);
+    }
+
+    .signin {
+        height: calc(100% - 90px);
+    }
+}
+
+@media screen and (max-width: 980px) and (min-width: 250px) {}
+
+@media screen and (max-width: 940px) and (min-width: 250px) {}
+
+@media screen and (max-width: 800px) and (min-width: 250px) {}
+
+@media screen and (max-width: 768px) and (min-width: 250px) {}
+
+@media screen and (max-width: 767px) and (min-width: 250px) {
+    .menuitem li {
+        margin: 0 15px;
+    }
+
+    .banner {
+        background-image: none;
+    }
+
+    .signin {
+        background-image: none;
+    }
+
+    .header {
+        border-bottom: 1px solid #7882f3;
+    }
+
+    .webform {
+        margin: 0 auto;
+    }
+
+    .signFM {
+        margin: 0 auto;
+    }
+
+    .makes {
+        margin: 20px auto;
+    }
+
+    .makesin {
+        margin: 20px auto;
+    }
+}
+
+@media screen and (max-width: 640px) and (min-width: 250px) {}
+
+@media screen and (max-width: 600px) and (min-width: 250px) {}
+
+@media screen and (max-width: 580px) and (min-width: 250px) {
+    .header {
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 520px) and (min-width: 250px) {
+    .menuitem li {
+        margin: 0 10px;
+    }
+}
+
+@media screen and (max-width: 480px) and (min-width: 250px) {
+    .logo {
+        margin: 0 auto;
+        padding-bottom: 15px;
+    }
+
+    .menulist {
+        margin: 0 auto;
+    }
+
+    .webform {
+        padding: 10px 10px;
+    }
+
+    .signFM {
+        padding: 10px 10px;
+    }
+
+    .makes h4 {
+        font-size: 25px;
+    }
+
+    .makes span {
+        font-size: 20px;
+    }
+
+    .makesin h4 {
+        font-size: 25px;
+    }
+
+    .makesin span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 440px) and (min-width: 250px) {}
+
+@media screen and (max-width: 420px) and (min-width: 250px) {}
+
+@media screen and (max-width: 380px) and (min-width: 250px) {}
+
+@media screen and (max-width: 360px) and (min-width: 250px) {
+    .menuitem li {
+        margin: 0 5px;
+    }
+
+    .submitbuttonsi {
+        float: unset;
+    }
+
+    .forgotpass {
+        padding-top: 10px;
+        float: unset;
+    }
+}
+
+@media screen and (max-width: 320px) and (min-width: 250px) {}
+
+@media only screen and (max-width: 250px) {}
+
+/*---Mobile landscape----*/
+@media screen and (min-width: 480px) and (max-width: 980px) and (orientation: landscape){
+    .header {
+        position: relative;
+    }
+}

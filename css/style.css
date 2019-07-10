@@ -1,0 +1,675 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Poppins-Regular', sans-serif;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #444;
+    background-color: #fff;
+}
+
+.clearfix::after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url(../fonts/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Black';
+    src: url(../fonts/Poppins-Black.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Bold';
+    src: url(../fonts/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-SemiBold';
+    src: url(../fonts/Poppins-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Poppins-Light';
+    src: url(../fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url(../fonts/Ubuntu-Bold.ttf);
+}
+
+a {
+    font-family: 'Poppins-Regular';
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    color: #333;
+    -webkit-outline: none;
+    -moz-outline: none;
+    outline: none;
+}
+
+span {
+    display: inline-block;
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    color: #333;
+}
+
+em {
+    font-style: normal;
+}
+
+p {
+    font-size: 16px;
+    font-family: 'Poppins-Regular';
+    color: #444444;
+    line-height: 1.7;
+}
+
+h1 {
+    font-family: 'Poppins-Black';
+    font-size: 35px;
+}
+
+h2 {
+    font-family: 'Poppins-Bold';
+    font-size: 25px;
+}
+
+h3 {
+    font-family: 'Poppins-SemiBold';
+    font-size: 24px;
+}
+
+h4 {
+    font-family: 'Ubuntu-Bold';
+    font-size: 22px;
+    font-weight: normal;
+}
+
+h5 {
+    font-family: 'Poppins-Light';
+    font-size: 18px;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.hide {
+    display: none;
+}
+
+.animatable {
+    visibility: hidden;
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -ms-animation-play-state: paused;
+    -o-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+.container {
+    width: 90%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.transition {
+    transition: all 0.5s linear 0s;
+    -webkit-transition: all 0.5s linear 0s;
+    -moz-transition: all 0.5s linear 0s;
+    -o-transition: all 0.5s linear 0s;
+}
+
+.fixed {
+    position: fixed;
+}
+
+[type=reset],
+[type=submit],
+button,
+html [type=button] {
+    -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner,
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted;
+}
+
+[type=checkbox],
+[type=radio] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+::-webkit-input-placeholder {
+    color: #777 !important;
+    opacity: 1;
+    font-size: 15px !important;
+    font-weight: normal;
+}
+
+::-moz-placeholder {
+    color: #777 !important;
+}
+
+button {
+    outline: none;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+    font-family: "Poppins-Regular";
+    cursor: pointer;
+}
+
+input,
+select,
+textarea {
+    outline: none;
+    display: block;
+    font-family: "Poppins-Regular";
+    font-weight: 500;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+}
+
+.f-left {
+    float: left;
+    display: block;
+}
+
+.f-right {
+    float: right;
+    display: block;
+}
+
+.active {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0s;
+}
+
+.responsive {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: block;
+    object-fit: cover;
+}
+
+/*Header*/
+
+.header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: block;
+    background-color: #525ee8;
+    color: #fff;
+    padding: 8px 0;
+    z-index: 99;
+}
+
+.menubar {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menulist {
+    display: flex;
+    align-items: center;
+}
+
+.menuitem li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+.menuitem li {
+    display: inline-block;
+    margin: 0 25px;
+    text-align: center;
+}
+
+.login a{
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: all 0.5s linear 0s;
+}
+
+.login a:hover {
+    background-color: #fe7193;
+    border: 1px solid #fe7193;
+}
+
+.signup a{
+    padding: 8px 20px;
+    background-color: #fe7193;
+    border-radius: 5px;
+    border: 1px solid #fe7193;
+    transition: all 0.5s linear 0s;
+}
+
+.signup a:hover {
+    border: 1px solid #ddd;
+    background-color: transparent;
+}
+
+/*end*/
+
+/*banner*/
+
+.banner {
+    width: 100%;
+    height: calc(100% - 90px);
+    background: #525ee8 url(../images/bannerimg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 45%;
+    overflow: hidden;
+}
+
+.makes {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    max-width: 500px;
+    text-align: left;
+    display: block;
+}
+
+.makes h4 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.makes span {
+    font-size: 35px;
+    color: #2e368f;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.register {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.webform {
+    position: relative;
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-top: 20px;
+    background-color: #4d58d7;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+.webform h4::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px auto 0;
+}
+
+.webform h4 {
+    color: #f0f0f0;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    display: inline-block;
+}
+
+.webform>p {
+    font-size: 16px;
+    color: #dfdfdf;
+    padding-top: 5px;
+}
+
+.conta-form {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.conta-form li:first-child {
+    margin: 5px 0;
+}
+
+.conta-form li {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 25px 0;
+    border: 1px solid #ddd;
+}
+
+.conta-form li label {
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.foicon {
+    width: 45px;
+    height: 45px;
+    float: left;
+    color: #afafaf;
+    font-size: 15px;
+    text-align: center;
+    line-height: 45px;
+    border-right: 1px solid #ddd;
+}
+
+.conta-form li label input {
+    width: calc(100% - 45px);
+    line-height: 45px;
+    padding: 0 5px 0 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+
+.conta-form li.submitSet {
+    padding-top: 5px;
+    margin: 0;
+}
+
+.submitbutton {
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+    letter-spacing: .5px;
+    border-radius: 999px;
+    color: #525ee8;
+    transition: all 0.5s linear 0s;
+}
+
+.submitbutton:hover {
+    background-color: #525ee8;
+    color: #fff;
+    box-shadow: 0px 4px 4px 0px #262e88;
+}
+
+.alACC {
+    font-size: 16px;
+    color: #ccc;
+    padding-top: 10px;
+    font-weight: 500;
+}
+
+.alACC a {
+    color: #fff;
+}
+
+/*end*/
+
+
+/*signin*/
+.signin {
+    width: 100%;
+    height: calc(100vh - 90px);
+    background: #525ee8 url(../images/bannerimg.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 55%;
+    overflow: hidden;
+}
+
+.makesin {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    max-width: 500px;
+    text-align: left;
+    display: block;
+}
+
+.makesin h4 {
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+.makesin span {
+    font-size: 35px;
+    color: #2e368f;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.signinform {
+    width: 100%;
+    display: block;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.signFM {
+    position: relative;
+    width: 100%;
+    display: block;
+    max-width: 500px;
+    margin-top: 20px;
+    background-color: #4d58d7;
+    border-radius: 10px;
+    padding: 10px 30px;
+}
+
+.signFM h4::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #fff;
+    margin: 5px auto 0;
+}
+
+.signFM h4 {
+    color: #f0f0f0;
+    font-size: 25px;
+    font-weight: normal;
+    text-align: center;
+    display: inline-block;
+}
+
+.signFM>p {
+    font-size: 16px;
+    color: #dfdfdf;
+    padding-top: 5px;
+}
+
+.conta-sign {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.conta-sign li:first-child {
+    margin: 5px 0;
+}
+
+.conta-sign li {
+    width: 100%;
+    display: block;
+    position: relative;
+    margin: 25px 0;
+}
+
+.conta-sign li label {
+    width: 100%;
+    display: block;
+    position: relative;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.foicon {
+    width: 45px;
+    height: 45px;
+    float: left;
+    color: #afafaf;
+    font-size: 15px;
+    text-align: center;
+    line-height: 45px;
+    border-right: 1px solid #ddd;
+}
+
+.conta-sign li label input {
+    width: calc(100% - 45px);
+    line-height: 45px;
+    padding: 0 5px 0 5px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+
+.conta-sign li.submitSetin {
+    padding-top: 5px;
+    margin: 0;
+}
+
+.submitbuttonsi {
+    display: inline-block;
+    padding: 10px 30px;
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: #fff;
+    letter-spacing: .5px;
+    border-radius: 999px;
+    color: #525ee8;
+    transition: all 0.5s linear 0s;
+}
+
+.submitbuttonsi:hover {
+    background-color: #525ee8;
+    color: #fff;
+    box-shadow: 0px 4px 4px 0px #262e88;
+}
+
+.forgotpass a {
+    color: #fff;
+}
+
+.alACCS {
+    font-size: 16px;
+    color: #ccc;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.alACCS a {
+    color: #fff;
+}
+
+/*end*/
+
+/*footer*/
+.footer {
+    width: 100%;
+    background-color: #444;
+    padding: 10px 0;
+}
+
+.copcc {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.copyr a {
+    font-size: 14px;
+    color: #fff;
+}
+
+.cookie a {
+    font-size: 14px;
+    color: #fff;
+}
+
+/*end*/
