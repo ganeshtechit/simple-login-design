@@ -52,7 +52,7 @@
         </div>
     </div>
     <div class="bottimg">
-        <img class="responsive" src="images/bannerimg.png" alt="Webspa">
+        <img class="responsive" src="images/bannerimg.png" alt="demo">
     </div>
 </section>
 
